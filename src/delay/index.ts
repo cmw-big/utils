@@ -1,6 +1,6 @@
-const a = 1
+let a                                = 1
 
 interface b {
   name: string
 }
-console.log(2131)
+console.log(2131);
