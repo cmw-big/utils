@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -25,12 +26,10 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.5.1",
+    "prettier-eslint": "^13.0.0",
     "typescript": "^4.5.4"
   },
   "lint-staged": {
-    "**/*.{tsx,ts}": [ // 这里的文件后缀可以修改成自己需要的文件后缀
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "*.{js,ts,jsx,tsx}": "eslint --cache --fix",
   }
 }
